@@ -1,11 +1,17 @@
 "# cis_102" 
 Group website for non for profit
 
-to activate virtual enviorment to work in and run any programs run:
+To use create a venv
+Then create a .gitignore file and add "venv/" to it
+Then activate the virtual enviorment to install dependencies
 
-Windows: venv\Scripts\activate
+    Windows: venv\Scripts\activate
 
-Unix\MacOs: venv/bin/activate
+    Unix\MacOs: venv/bin/activate
+After activating run "pip install -r requirements.txt" to install deoendencies
+After installing run "deactivate"
+You should be able to run the python program without venv active
+
 
 Jinja 
 

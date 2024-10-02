@@ -18,7 +18,13 @@ def home():
 
 @app.route('/team')
 def team():
-    return render_template('team.html')
+
+    with open('name.txt', 'r') as file:
+        file_content=file.read()
+
+    file_content = file_content.replace('\n','<br><br>')
+
+    return render_template('team.html',content=file_content)
 
 if __name__ == '__main__':
     app.run(debug=True)

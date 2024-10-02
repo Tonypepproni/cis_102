@@ -19,10 +19,10 @@ def home():
 @app.route('/team')
 def team():
 
-    with open('name.txt', 'r') as file:
+    with open('name.txt', 'r') as file: #opens name.txt file in read mode
         file_content=file.read()
 
-    file_content = file_content.replace('\n','<br><br>')
+    file_content = file_content.replace('\n','<br><br>') #replaces the new line character with the break line html tag
 
     return render_template('team.html',content=file_content)
 

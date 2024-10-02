@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="static/style.css" type="text/css">
+        <title>{% block title %} defualt title {% endblock %}</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Motherboard & Man website</h1>
+            {% block header %}
+            <h6>page name</h6>
+            {% endblock %}
+        </header>
+
+        <nav>
+            <ul>
+                {% for page in nav_items %}
+                    <li class="nav-li">
+                        <a class="nav-link" href="{{ page.url }}">{{ page.name }}</a>
+                    </li>
+                {% endfor %}
+
+            </ul>
+        </nav>
+
+        <main>
+
+        </main>
+
+        <footer>
+
+        </footer>
+    </body>
+</html>

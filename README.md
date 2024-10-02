@@ -2,7 +2,7 @@
 Group website for non for profit
 
 To use create a venv
-Then create a .gitignore file and add "venv/" to it
+Then create a .gitignore file and add "venv/" to it (dont do it if it already exists)
 Then activate the virtual enviorment to install dependencies
 
     Windows: venv\Scripts\activate

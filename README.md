@@ -10,8 +10,8 @@ Then activate the virtual enviorment to install dependencies
     Unix\MacOs: venv/bin/activate
 After activating run "pip install -r requirements.txt" to install deoendencies
 After installing run "deactivate"
-You should be able to run the python program without venv active
 
+NOTE: the venv must be active in order to run the program
 
 Jinja 
 

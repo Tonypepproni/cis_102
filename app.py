@@ -7,9 +7,10 @@ def inject_nav_items():
     #puts the list nav items into each template so there is no need to define it outside the function
     nav_items = [
         {'name': 'Home', 'url': '/'},
-        {'name':'Teams all years','url':'/team'},
+        {'name': 'Sign Up', 'url': '/sign_up'},
+        {'name':'Team','url':'/team'},
         {'name':'About us','url':'/about_us'},
-        {'name':'Socials','url':'/socials'}
+        {'name':'e-Mitre','url':'/e-mitre'}
     ]
     return dict(nav_items=nav_items)
 

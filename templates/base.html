@@ -9,10 +9,13 @@
 
     <body>
         <header>
-            <h1>Motherboard & Man website</h1>
-            {% block header %}
-            <h6>page name</h6>
-            {% endblock %}
+            <img src="static/imgs/WiCys.png" alt="Women in Cybersecurity Logo">
+            <div>
+                <h1>e-Mitre Pace Team</h1>
+                {% block header %}
+                <h6>page name</h6>
+                {% endblock %}
+            </div>
         </header>
 
         <nav>
@@ -27,13 +30,26 @@
         </nav>
 
         <main>
-            {% block main %}
+            <div class="main_content">
+                {% block main_con %}
 
-            {% endblock %}
+                {% endblock %}
+            </div>
         </main>
 
         <footer>
+            <img src="static/imgs/WiCys.png" alt="Women in Cybersecurity Logo">
 
+            <div id="footer_contact">
+                <h5>Contact Info</h5>
+                <a href ="mailto:lellrodt@pace.edu">Main Advisor</a>
+            </div>
+            <div id="site_link">
+                <a href ="/signup">Sign up</a>
+                <a href ="/team">Teams</a>
+                <a href ="/aboutus.html">About Us</a>
+                <a href ="/sitemap.html">Site Map</a>
+            </div>
         </footer>
     </body>
 </html>

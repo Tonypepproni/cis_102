@@ -3,5 +3,6 @@ Home,/,home.html
 Teams,/team,team.html
 About Us,/aboutus,about_us.html
 Site Map,/sitemap,sitemap.html
-Team 2024,/team2024,team2024.html
-Team 2025,/team2025,team2025.html
+Team 2024,/team/team2024,team2024.html
+Team 2025,/team/team2025,team2025.html
+Sign Up,/signup,signup.html

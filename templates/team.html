@@ -1,11 +1,20 @@
 {% extends "base.html" %}
 
-{% block title %} Team Members {% endblock %}
-
-{% block header %}
-<h6>Team Members</h6>
-{% endblock %}
-
 {% block main %}
-    <p>{{ content|safe }}</p>
+    <div class="main_con">
+        <h2>Meet Our team - {{year}}</h2>
+        <div class="teampic">
+            <img src="static/imgs{{ teamPic }}.jpg" alt="a picture of the e-Mitre from the year {{ year }}">
+        </div>
+        <h2>Current Team</h2>
+    </div>
+
+    <div class="main_con">
+        <h4>Previous Team</h4>
+        {% for team in teams %}
+            <ul>
+                <li><a href="{{team.url}}">{{team.name}}</a></li>
+            </ul>
+        {% endfor %}
+    </div>
 {% endblock %}

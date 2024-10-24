@@ -10,7 +10,7 @@ class Basic(View):
         self.template_name = template_name
         self.nav_items=[
             {'name':'Home','url':'/'},
-            {'name':'Teams','url':'/teams'},
+            {'name':'Teams','url':'/team'},
             {'name':'Sign Up','url':'/signup'},
             {'name':'About Us','url':'/aboutus'},
             {'name':'e-Mitre','url':'/emitre'}
@@ -23,12 +23,32 @@ class Basic(View):
             name=self.name
         )
 
+class team(Basic):
+    def __init__(self, name, template_name,teams):
+        super().__init__(name, template_name)
+        self.teams=teams
+
+    def dispatch_request(self):
+        return render_template(
+            self.template_name,
+            nav_items=self.nav_items,
+            name=self.name,
+            teams=self.teams
+        )
+
 templates=[]
+teams=[]
 
 with open('static/template.csv', mode='r')as file:
     csvFile = csv.DictReader(file)
     for line in csvFile:
         templates.append(line)
+
+with open('static/teams.csv', mode='r')as file:
+    csvFile = csv.DictReader(file)
+    for line in csvFile:
+        line.update({'url':f'team/{line['name']}','pic':f'team{line['year']}'})
+        teams.append(line)
 
 for temp in templates:
     main.add_url_rule(temp['route'], view_func = Basic.as_view(temp['name'],temp['name'], temp['tempName']))

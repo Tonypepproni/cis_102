@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="static/style.css" type="text/css">
-        <title>{% block title %} defualt title {% endblock %}</title>
+        <title>{{ name }}</title>
     </head>
 
     <body>
@@ -13,7 +13,7 @@
             <div>
                 <h1>e-Mitre Pace Team</h1>
                 {% block header %}
-                <h6>page name</h6>
+                {{ name }}
                 {% endblock %}
             </div>
         </header>

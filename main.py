@@ -25,7 +25,7 @@ class Basic(View):
 
 templates=[]
 
-with open('template.csv', mode='r')as file:
+with open('static/template.csv', mode='r')as file:
     csvFile = csv.DictReader(file)
     for line in csvFile:
         templates.append(line)

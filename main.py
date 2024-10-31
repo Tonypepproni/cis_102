@@ -47,7 +47,7 @@ with open('static/template.csv', mode='r')as file:
 with open('static/teams.csv', mode='r')as file:
     csvFile = csv.DictReader(file)
     for line in csvFile:
-        line.update({'url':f'team/{line['name'].lower()}','pic':f'team{line['year']}'})
+        line.update({'url':f'team/{line['name'].lower()}','pic':f'team{line['year']}.jpg'})
         teams.append(line)
 
 for temp in templates:
@@ -55,6 +55,7 @@ for temp in templates:
         main.add_url_rule(temp['route'], view_func = Basic.as_view(temp['name'],temp['name'], temp['tempName']))
     elif temp['type']=='team':
         main.add_url_rule(temp['route'],view_func= team.as_view(temp['name'],temp['name'],temp['tempName'],teams))
+
 
 if __name__ =='__main__':
     main.run(debug=True)

@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="static/style.css" type="text/css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
         <title>{{ name }}</title>
     </head>
 
@@ -28,11 +28,9 @@
         </nav>
 
         <main>
-            <div class="main_content">
-                {% block main_con %}
+            {% block main %}
 
-                {% endblock %}
-            </div>
+            {% endblock %}
         </main>
 
         <footer>
@@ -43,10 +41,12 @@
                 <a href ="mailto:lellrodt@pace.edu">Main Advisor</a>
             </div>
             <div id="site_link">
-                <a href ="/signup.html">Sign up</a>
-                <a href ="/team.html">Teams</a>
-                <a href ="/aboutus.html">About Us</a>
-                <a href ="/sitemap.html">Site Map</a>
+                <ul>
+                    <li><a href ="/signup.html">Sign up</a></li>
+                    <li><a href ="/team.html">Teams</a></li>
+                    <li><a href ="/aboutus.html">About Us</a></li>
+                    <li><a href ="/sitemap.html">Site Map</a></li>
+                </ul>
             </div>
         </footer>
     </body>

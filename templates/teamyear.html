@@ -5,17 +5,17 @@
     <h2>Meet Our Team - {{teams['year']}}</h2>
     <br>
     <div class="Team Image">
-        <img src="{{ url_for('static', filename='imgs/teampics/' + 'teams['pic']' +'.jpg')}}" alt="team {{teams['year']}} pic">
+        <img src="{{ url_for('static', filename='imgs/teampics/' + teams['pic'] +'.jpg')}}" alt="team {{teams['year']}} pic">
     </div>
     <h3>{{ teams['rank']}}</h3>
 
     <p>Team Members</p>
-    {% for name in teams['name'] %}
+    {% for i in names %}
         <dl>
-            <dt>{{ name['name'] }}</dt>
+            <dt>{{ i['name'] }}</dt>
             <dd>
                 <ul>
-                    <li><a href="{{ name['linkedin']  }}">LinkedIn</a></li>
+                    <li><a href="{{ i['linkedin']  }}">LinkedIn</a></li>
                 </ul>
             </dd>
         </dl>

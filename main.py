@@ -44,16 +44,17 @@ class team(Basic):
 
 
 class teamyear(team):
-    def __init__(self, name, template_name,team):
-        super().__init__(name, template_name)
-        self.team=team
+    def __init__(self, name, template_name,teams,names):
+        super().__init__(name, template_name,teams)
+        self.names=names
 
     def dispatch_request(self):
         return render_template(
             self.template_name,
-            self.team,
             nav_items=self.nav_items,
             name=self.name,
+            teams=self.teams,
+            names=self.names
         )
 
 templates=[]
@@ -67,8 +68,15 @@ with open('static/template.csv', mode='r')as file:
 with open('static/teams.csv', mode='r')as file:
     csvFile = csv.DictReader(file)
     for line in csvFile:
+        
+        line.update({
+            'url':f'team/{line['name'].lower()}',
+            'pic':f'team{line['year']}.jpg'
+        })
 
         teams.append(line)
+
+i=0
 
 for temp in templates:
     if temp['type']=='basic':
@@ -76,7 +84,10 @@ for temp in templates:
     elif temp['type']=='team':
         main.add_url_rule(temp['route'],view_func= team.as_view(temp['name'],temp['name'],temp['tempName'],teams))
     elif temp['type']=='teamyear':
-        main.add_url_rule(temp['route'],view_func=teamyear.as_view(temp['name'],temp['name'],name,)
+        names=name_reader(teams[i]['year'])
+
+        main.add_url_rule(temp['route'],view_func=teamyear.as_view(temp['name'],temp['name'],temp['tempName'],teams[i],names))
+        i+=0 #indexs I whenever a team page is generated
 
 if __name__ =='__main__':
     main.run(debug=True)

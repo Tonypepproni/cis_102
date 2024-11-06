@@ -1,3 +1,57 @@
+html{
+    width: 100%;
+}
+
 body {
-    background-color: pink;
+    background-color: #FFFFFF;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    width: 80%;
+    margin-left: 10%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #A43BA7;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+}
+
+#WiCysLogo{
+    display: flex;
+    justify-content: start;
+    width: 150px;
+    height: auto;
+}
+
+#WiCysLogo img{
+    max-width: 100%;
+}
+
+#headTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav{
+
+}
+
+main{
+
+}
+
+footer{
+    display: flex;
+    font-family: Roboto, sans-serif;
+
 }

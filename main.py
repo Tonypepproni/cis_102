@@ -47,7 +47,15 @@ with open('static/template.csv', mode='r')as file:
 with open('static/teams.csv', mode='r')as file:
     csvFile = csv.DictReader(file)
     for line in csvFile:
-        line.update({'url':f'team/{line['name'].lower()}','pic':f'team{line['year']}.jpg'})
+
+        with open(f"static/teamNames/name{line['year']}.csv",mode='r') as nameFile:
+            name=list(csv.DictReader(nameFile))
+
+        line.update({
+                'url':f'team/{line['name'].lower()}',
+                'pic':f'team{line['year']}.jpg',
+                'name': name
+            })
         teams.append(line)
 
 for temp in templates:

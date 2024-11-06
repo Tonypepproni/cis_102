@@ -5,7 +5,7 @@
     <h2>Meet Our Team - {{teams['year']}}</h2>
     <br>
     <div class="Team Image">
-        <img src="{{ url_for('static', filename='imgs/teampics/teams['pic']')}}" alt="team {{teams['year']}} pic">
+        <img src="{{ url_for('static', filename='imgs/teampics/' + 'teams['pic']' +'.jpg')}}" alt="team {{teams['year']}} pic">
     </div>
     <h3>{{ teams['rank']}}</h3>
 

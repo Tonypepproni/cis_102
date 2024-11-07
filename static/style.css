@@ -21,16 +21,20 @@ h1,h2,h3,h4,h5,h6 {
 header{
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
     width:100%;
+    position: relative;
 }
 
 #WiCysLogo{
+    position: absolute;
     display: flex;
     justify-content: start;
     width: 150px;
     height: auto;
-    left: 0;
+    left: 10px;
+    margin-left: 0;
 }
 
 #WiCysLogo img{
@@ -41,6 +45,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 nav{
@@ -54,5 +59,5 @@ main{
 footer{
     display: flex;
     font-family: Roboto, sans-serif;
-
+    position: relative;
 }

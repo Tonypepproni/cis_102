@@ -21,7 +21,7 @@ h1,h2,h3,h4,h5,h6 {
 header{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     width:100%;
 }
 
@@ -30,6 +30,7 @@ header{
     justify-content: start;
     width: 150px;
     height: auto;
+    left: 0;
 }
 
 #WiCysLogo img{

@@ -1,1 +1,26 @@
 {% extends "base.html" %}
+
+{% block main %}
+
+    <h2>Meet Our Team - {{teams['year']}}</h2>
+    <br>
+    <div class="Team Image">
+        <img src="{{ url_for('static', filename='imgs/teampics/' + teams['pic'] +'.jpg')}}" alt="team {{teams['year']}} pic">
+    </div>
+    <h3>{{ teams['rank']}}</h3>
+
+    <p>Team Members</p>
+    {% for i in names %}
+        <dl>
+            <dt>{{ i['name'] }}</dt>
+            <dd>
+                <ul>
+                    <li><a href="{{ i['linkedin']  }}">LinkedIn</a></li>
+                </ul>
+            </dd>
+        </dl>
+    {% endfor %}
+
+{% endblock %}
+
+

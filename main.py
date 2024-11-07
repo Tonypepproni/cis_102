@@ -4,6 +4,12 @@ import csv
 
 main=Flask(__name__)
 
+def name_reader(year):
+        with open(f"static/teamNames/name{year}.csv",mode='r') as nameFile:
+            name=list(csv.DictReader(nameFile))
+
+        return name
+
 class Basic(View):
     def __init__(self,name,template_name):
         self.name=name
@@ -36,6 +42,21 @@ class team(Basic):
             teams=self.teams
         )
 
+
+class teamyear(team):
+    def __init__(self, name, template_name,teams,names):
+        super().__init__(name, template_name,teams)
+        self.names=names
+
+    def dispatch_request(self):
+        return render_template(
+            self.template_name,
+            nav_items=self.nav_items,
+            name=self.name,
+            teams=self.teams,
+            names=self.names
+        )
+
 templates=[]
 teams=[]
 
@@ -47,14 +68,26 @@ with open('static/template.csv', mode='r')as file:
 with open('static/teams.csv', mode='r')as file:
     csvFile = csv.DictReader(file)
     for line in csvFile:
-        line.update({'url':f'team/{line['name'].lower()}','pic':f'team{line['year']}'})
+        
+        line.update({
+            'url':f'team/{line['name'].lower()}',
+            'pic':f'team{line['year']}.jpg'
+        })
+
         teams.append(line)
+
+i=0
 
 for temp in templates:
     if temp['type']=='basic':
         main.add_url_rule(temp['route'], view_func = Basic.as_view(temp['name'],temp['name'], temp['tempName']))
     elif temp['type']=='team':
         main.add_url_rule(temp['route'],view_func= team.as_view(temp['name'],temp['name'],temp['tempName'],teams))
+    elif temp['type']=='teamyear':
+        names=name_reader(teams[i]['year'])
+
+        main.add_url_rule(temp['route'],view_func=teamyear.as_view(temp['name'],temp['name'],temp['tempName'],teams[i],names))
+        i+=0 #indexs I whenever a team page is generated
 
 if __name__ =='__main__':
     main.run(debug=True)

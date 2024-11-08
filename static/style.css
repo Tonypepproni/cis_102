@@ -24,7 +24,12 @@ header{
     align-items: center;
     justify-content: center;
     width:100%;
+    height: auto;
     position: relative;
+    border: 5px solid purple;
+    border-top: 0;
+    border-radius: 0px 0px 15px 15px;
+    padding: auto;
 }
 
 #WiCysLogo{
@@ -32,9 +37,10 @@ header{
     display: flex;
     justify-content: start;
     width: 150px;
-    height: auto;
+    height: 150px;
     left: 10px;
     margin-left: 0;
+    
 }
 
 #WiCysLogo img{
@@ -48,12 +54,37 @@ header{
     justify-content: center;
 }
 
+header::after{
+    content: '';
+    display: block;
+    height: 150px;
+}
+
 nav{
 
 }
 
 main{
+    width: 100%;
+}
 
+.main_con{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#allteams{
+    display: flex;
+    flex-direction: column;
+}
+
+#allteams > ul {
+    columns: 4;
+}
+
+#allteams > ul > li {
+    margin: 0px 10px 0px 10px;
 }
 
 footer{

@@ -21,16 +21,28 @@ h1,h2,h3,h4,h5,h6 {
 header{
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
     width:100%;
+    height: auto;
+    position: relative;
+    border: 5px solid purple;
+    border-top: 0;
+    top: 0;
+    border-bottom: 0;
+    bottom: 0;
+    padding: auto;
 }
 
 #WiCysLogo{
+    position: absolute;
     display: flex;
     justify-content: start;
     width: 150px;
-    height: auto;
-    left: 0;
+    height: 150px;
+    left: 10px;
+    margin-left: 0;
+    
 }
 
 #WiCysLogo img{
@@ -41,18 +53,77 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+header::after{
+    content: '';
+    display: block;
+    height: 150px;
 }
 
 nav{
+    width: 100%;
+    border: 5px solid purple;
+    border-radius: 0px 0px 15px 15px;
+    border-top: 0;
+    top: 0;
+}
 
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+nav > ul > button{
+    width: 40px;
+    height: 30px;
+}
+
+nav > ul > li {
+    margin: 10px;
+    list-style-type: none;
+    padding:  10px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav > ul > li:hover{
+    background-color: #9e49a191;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
 }
 
 main{
+    width: 100%;
+}
 
+.main_con{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#allteams{
+    display: flex;
+    flex-direction: column;
+}
+
+#allteams > ul {
+    columns: 4;
+}
+
+#allteams > ul > li {
+    margin: 0px 10px 0px 10px;
 }
 
 footer{
     display: flex;
     font-family: Roboto, sans-serif;
-
+    position: relative;
 }

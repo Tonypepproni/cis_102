@@ -3,19 +3,24 @@ html{
 }
 
 body {
-    background-color: #fffef5;
+    background-color: #eefcdb;
     font-family: "Barlow Semi Condensed", sans-serif;
     width: 80%;
     margin-left: 10%;
-    #fffef5
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 h1,h2,h3,h4,h5,h6 {
     color: #A43BA7;
     font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+header, nav, footer{
+    background-color: #fbf9dd;
 }
 
 header{
@@ -41,12 +46,20 @@ header{
     width: 150px;
     height: 150px;
     left: 10px;
-    margin-left: 0;
-    
+    margin-left: 5px;
+    margin-top: 20px;
+
 }
 
 #WiCysLogo img{
     max-width: 100%;
+    transition: transform 0.3s ease-in;
+    border-radius: 15px;
+}
+
+#WiCysLogo img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #headTitle{
@@ -68,6 +81,8 @@ nav{
     border-radius: 0px 0px 15px 15px;
     border-top: 0;
     top: 0;
+    font-size: large;
+    font-weight: 300;
 }
 
 nav > ul {
@@ -80,9 +95,20 @@ nav > ul {
 nav > ul > button{
     width: 40px;
     height: 30px;
+    border-radius: 15px;
+    background-color: #dbfab1;
+    border-style: dotted;
+    border-color: #eefcdb;
+}
+
+nav > ul > button:hover{
+    background-color: #8FCC41;
 }
 
 nav > ul > li {
+    border-color: #A43BA7;
+    border-style: ridge;
+    border-radius: 15px;
     margin: 10px;
     list-style-type: none;
     padding:  10px 30px;
@@ -93,6 +119,7 @@ nav > ul > li {
 
 nav > ul > li:hover{
     background-color: #9e49a191;
+    border-radius: 15px;
 }
 
 nav > ul > li > a {
@@ -124,9 +151,7 @@ main{
 
 footer{
     display: flex;
-    font-family: Roboto, sans-serif;
-
-
+    width: 100%;
 }
 
 .gallery {
@@ -136,33 +161,32 @@ footer{
     max-width: 1000px;
     width: 100%;
     align-items: center;
-  }
-  
-  .gallery-item {
+}
+
+.gallery-item {
     overflow: hidden;
     border-radius: 8px;
     justify-content: right;
-  }
-  
-  .gallery-item img {
+}
+
+.gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-  }
-  
-  .gallery-item img:hover {
-    transform: scale(1.05);
-  }
+}
 
-  iframe {
+.gallery-item img:hover {
+    overflow: visible;
+    transform: scale(1.25);
+}
+
+iframe {
     width: 100%;          /* Makes iframe take full width of its container */
     height: 500px;        /* Sets a fixed height for the iframe */
     border: none;         /* Removes the default border */
     border-radius: 10px;  /* Adds rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
     overflow: hidden;    /* Hides any overflow content */
-=======
     position: relative;
-
 }

@@ -23,15 +23,15 @@
         </header>
 
         <nav>
-            <button class="nav_toggle">
-                <i class="fas fa-bars"></i>
-            </button>
             <ul>
                 {% for page in nav_items %}
                     <li class="nav-li">
                         <a class="nav-link" href="{{ page.url }}">{{ page.name }}</a>
                     </li>
                 {% endfor %}
+                <button class="nav_toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
 
             </ul>
         </nav>

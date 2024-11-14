@@ -7,7 +7,7 @@ body {
     font-family: "Barlow Semi Condensed", sans-serif;
     width: 80%;
     margin-left: 10%;
-
+    #fffef5
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,6 +69,7 @@ footer{
   .gallery-item {
     overflow: hidden;
     border-radius: 8px;
+    justify-content: right;
   }
   
   .gallery-item img {
@@ -81,3 +82,12 @@ footer{
   .gallery-item img:hover {
     transform: scale(1.05);
   }
+
+  iframe {
+    width: 100%;          /* Makes iframe take full width of its container */
+    height: 500px;        /* Sets a fixed height for the iframe */
+    border: none;         /* Removes the default border */
+    border-radius: 10px;  /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    overflow: hidden;     /* Hides any overflow content */
+}

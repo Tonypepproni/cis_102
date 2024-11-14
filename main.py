@@ -70,11 +70,12 @@ with open('static/teams.csv', mode='r')as file:
     for line in csvFile:
         
         line.update({
-            'url':f'team/{line['name'].lower()}',
-            'pic':f'team{line['year']}.jpg'
+           'url': f"team/{line['name'].lower()}",
+            'pic': f"team{line['year']}.jpg"
         })
 
         teams.append(line)
+
 
 i=0
 

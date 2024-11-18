@@ -23,6 +23,14 @@ header, nav, footer{
     background-color: #fbf9dd;
 }
 
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+}
+
 header{
     display: flex;
     flex-direction: row;

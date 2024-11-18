@@ -83,7 +83,7 @@ exist=os.listdir('templates')
 
 for temp in templates:
 
-    if temp['tempName'] not in exist:
+    if (temp['tempName'] not in exist) and (temp['type']=="teamyear"):
         exist.append(temp['tempName'])
         file= open(f"{temp['tempName']}","w")
         file.write("{% extends 'teamyear.html' %}")

@@ -202,14 +202,12 @@ nav > ul > li > a {
 
 footer{
     display: flex;
-
+    flex-direction: row;
     font-family: Roboto, sans-serif;
     width: 100%;
     align-items: center;
     justify-content: center;
     
-
-=======
 }
 
 .gallery {

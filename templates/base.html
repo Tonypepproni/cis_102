@@ -3,11 +3,13 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/72d881ae9e.js" crossorigin="anonymous"></script>
+        <script src="static/scripts.js"></script>
         <title>{{ name }}</title>
     </head>
 
@@ -29,7 +31,7 @@
                         <a class="nav-link" href="{{ page.url }}">  {{ page.name }}  </a>
                     </li>
                 {% endfor %}
-                <button class="nav_toggle">
+                <button class="nav_toggle" onclick="collapse()">
                     <i class="fas fa-bars"></i>
                 </button>
 

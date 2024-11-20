@@ -7,7 +7,7 @@
     <div class="Team Image">
         <img src="{{ url_for('static', filename='imgs/teampics/' + teams['pic'] +'.jpg')}}" alt="team {{teams['year']}} pic">
     </div>
-    <h3>{{ teams['rank']}}</h3>
+    <h3>Rank: {{ teams['rank']}}</h3>
 
     <p>Team Members</p>
     {% for i in names %}

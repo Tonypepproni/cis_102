@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from flask.views import View
 import csv
+import os
 
 main=Flask(__name__)
 
@@ -70,15 +71,24 @@ with open('static/teams.csv', mode='r')as file:
     for line in csvFile:
         
         line.update({
-            'url':f'team/{line['name'].lower()}',
-            'pic':f'team{line['year']}.jpg'
+           'url': f"team/{line['name'].lower()}",
+            'pic': f"team{line['year']}.jpg"
         })
 
         teams.append(line)
 
+
 i=0
+exist=os.listdir('templates')
 
 for temp in templates:
+
+    if (temp['tempName'] not in exist) and (temp['type']=="teamyear"):
+        exist.append(temp['tempName'])
+        file= open(f"templates/{temp['tempName']}","w")
+        file.write("{% extends 'teamyear.html' %}")
+        file.close()
+
     if temp['type']=='basic':
         main.add_url_rule(temp['route'], view_func = Basic.as_view(temp['name'],temp['name'], temp['tempName']))
     elif temp['type']=='team':

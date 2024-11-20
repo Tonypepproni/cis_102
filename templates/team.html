@@ -9,12 +9,12 @@
         <h2>Current Team</h2>
     </div>
 
-    <div class="main_con">
+    <div class="main_con" id="allteams">
         <h4>Previous Team</h4>
-        {% for team in teams %}
-            <ul>
+        <ul>
+            {% for team in teams %}
                 <li><a href="{{team.url}}">{{team.name}}</a></li>
-            </ul>
-        {% endfor %}
+            {% endfor %}
+        </ul>
     </div>
 {% endblock %}

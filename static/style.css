@@ -189,6 +189,14 @@ main{
 
 footer{
     display: flex;
+
+    font-family: Roboto, sans-serif;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+
+=======
 }
 
 .gallery {

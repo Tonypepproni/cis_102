@@ -1,9 +1,6 @@
 {% extends "base.html" %}
 
 {% block main %}
-    <div class="main_con">
-        <img src="insert" alt="insert">
-    </div>
 
     <div class="main_con">
         <h1>Mission Statement</h1>
@@ -12,14 +9,18 @@
 
     <div class="main_con">
         <h2>Sponsors</h2>
-        <p>insert</p>
-        <small>insert</small>
+        <p>Westchester County Board of Legislator</p>
+        <div class="gallery-item">
+            <img src="{{ url_for('static', filename='imgs/image.png')}}" alt="Westchester County Board of Legislator Logo" style="height: 150px;" >
+          </div>
+        
     </div>
 
     <div class="main_con">
-        <h3>Collaborators</h3>
-        <p>insert</p>
-        <small>insert</small>
+        <h3>Advisors</h3>
+        <p>Professor Lisa Ellrodt</p>
+        <p>Professor Matthew Ganis</p>
+        <p>Dr. Mosley</p>   
     </div>
 
 {% endblock %}

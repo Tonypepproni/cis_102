@@ -1,3 +1,8 @@
+p{
+    line-height: 1.5; 
+    text-align: center;
+}
+
 header{
     display: flex;
     flex-direction: row;
@@ -81,7 +86,7 @@ html{
 }
 
 body {
-    background-color: #eefcdb;
+    background-color:  #fbf9dd;
     font-family: "Barlow Semi Condensed", sans-serif;
     width: 80%;
     margin-left: 10%;
@@ -93,12 +98,12 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    color: #A43BA7;
+    color:  purple;
     font-family: "Barlow Semi Condensed", sans-serif;
 }
 
 header, nav, footer{
-    background-color: #fbf9dd;
+    background-color: #eefcdb;
 }
 
 #WiCysLogo img{
@@ -219,11 +224,11 @@ footer{
 }
 
 iframe {
-    width: 100%;          /* Makes iframe take full width of its container */
-    height: 500px;        /* Sets a fixed height for the iframe */
-    border: none;         /* Removes the default border */
-    border-radius: 10px;  /* Adds rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
-    overflow: hidden;    /* Hides any overflow content */
+    width: 100%;        
+    height: 500px;        
+    border: none;         
+    border-radius: 10px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    overflow: hidden;    
     position: relative;
 }

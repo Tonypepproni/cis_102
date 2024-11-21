@@ -1,11 +1,22 @@
+nav button{
+    display: none;
+}
+
 p{
     line-height: 1.5; 
     text-align: center;
+}
+
+html, body{
+    height: 100%;
+}
+
 html{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    flex-grow: 1;
 }
 
 body{
@@ -34,18 +45,25 @@ header::after{
     height: 150px;
 }
 
+footer::after{
+    content: '';
+    display: block;
+    height: 170px;
+}
+
 #WiCysLogo{
     position: absolute;
     display: flex;
     justify-content: start;
     width: 150px;
-    height: 150px;
+    height: auto;
     left: 10px;
-    margin-left: 5px;
-    margin-top: 20px;
-
+    margin: 5px;
 }
 
+#site_link, #footer_contact{
+    margin: 0px 40px;
+}
 
 nav{
     width: 100%;
@@ -68,7 +86,30 @@ nav > ul {
 }
 
 main{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     width: 100%;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-family: Roboto, sans-serif;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    border: 5px solid purple;
+    border-bottom: 0;
+    border-radius: 15px 15px 0px 0px;
+    position: relative;
+}
+
+footer ul{
+    padding: 0;
 }
 
 @media screen and (max-width: 768px) /* Phone */{
@@ -76,20 +117,24 @@ main{
         width: 100%;
     }
 
-    header, nav{
+    header, nav, footer{
         border-left: 0;
         border-right: 0;
         border-radius: 0;
     }
 
-    header{
+    header, footer{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    header::after{
+    header::after, footer::after{
         height: 0px;
+    }
+
+    #timeline{
+        display: none;
     }
 
     #WiCysLogo{
@@ -99,6 +144,12 @@ main{
     nav > ul{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav button{
+        display: flex;
         align-items: center;
         justify-content: center;
     }
@@ -184,6 +235,10 @@ nav > ul > li > a {
     text-decoration: none;
 }
 
+main {
+    margin-bottom: 20px
+}
+
 .main_con{
     display: flex;
     flex-direction: column;
@@ -201,16 +256,6 @@ nav > ul > li > a {
 
 #allteams > ul > li {
     margin: 0px 10px 0px 10px;
-}
-
-footer{
-    display: flex;
-    flex-direction: row;
-    font-family: Roboto, sans-serif;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    
 }
 
 .gallery {

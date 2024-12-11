@@ -100,4 +100,4 @@ for temp in templates:
         i+=0 #indexs I whenever a team page is generated
 
 if __name__ =='__main__':
-    main.run(debug=True)
+    main.run(host='0.0.0.0')

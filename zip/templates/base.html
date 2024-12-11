@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/72d881ae9e.js" crossorigin="anonymous"></script>
+        <script src="static/scripts.js"></script>
+        <title>{{ name }}</title>
+    </head>
+
+    <body>
+        <header>
+            <div id="WiCysLogo">
+                <a href="/"><img src="{{ url_for('static', filename='imgs/WiCys.png')}}" alt="Women in Cybersecurity Logo"></a>
+            </div>
+            <div id="headTitle">
+                <h1>e-Mitre Pace Team</h1>
+                {{ name }}
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                {% for page in nav_items %}
+                    <li class="nav-li">
+                        <a class="nav-link" href="{{ page.url }}">  {{ page.name }}  </a>
+                    </li>
+                {% endfor %}
+                <button class="nav_toggle" onclick="collapse()">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+            </ul>
+        </nav>
+
+        <main>
+            {% block main %}
+
+            {% endblock %}
+        </main>
+
+        <footer>
+            <div id="WiCysLogo">
+                <a href="/"><img src="{{ url_for('static', filename='imgs/WiCys.png')}}" alt="Women in Cybersecurity Logo"></a>
+            </div>
+            <div id="footer_contact">
+                <h5>Contact Info</h5>
+                <ul>
+                    <li>Main Advisor</li>
+                    <dt><a href ="mailto:lellrodt@pace.edu">Lisa Ellrodt</a></dt>
+                </ul>
+                
+            </div>
+            <div id="site_link">
+                <ul>
+                    <li><a href ="/signup">Sign up</a></li>
+                    <li><a href ="/team">Teams</a></li>
+                    <li><a href ="/aboutus">About Us</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

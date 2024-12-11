@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+    <div class="main_con">
+
+        <h2>About the Competition</h2>
+
+        <p>
+            In the 2025 eCTF, teams will design and implement a Satellite TV system. 
+            The system must securely encode and decode satellite TV data 
+            streams while protecting against unauthorized access to protected channels.
+        </p>
+
+        <h3>Team registration is now open for the 2025 eCTF!</h3>
+        
+        <p><b> Email Lisa Ellrodt for more information about joining our team: </b></p>
+        <p> <a href ="mailto:lellrodt@pace.edu">Main Advisor</a> </p>
+        <br>
+        <br>
+
+        <div id="timeline">
+            <img src="{{ url_for('static', filename='imgs/timeline.png')}}" alt="Competition Timeline" style="height: 150px;">
+          </div>
+
+        <p><b> Here is the competition's sign up form. This form is only meant to be filled out by the team advisor.</b></p>
+
+        <iframe src="https://share.hsforms.com/1CD8GyZ1xRuqrVQOxvzq4mg4m7ji" title="Sign Up Form"></iframe>
+
+
+    </div>
+    
+ {% endblock %}

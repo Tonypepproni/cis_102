@@ -1,0 +1,29 @@
+{% extends "base.html" %}  <!-- Home is a child of base, so it copies everything , unless it's redifined -->
+{% block main %}
+    <div class="main_con">
+     <h2>Welcome to e-Mitre's Pace Team</h2>
+
+     <div class="gallery">
+        <div class="gallery-item">
+          <img src="{{ url_for('static', filename='imgs/1000006606.jpg')}}" alt="Mitre Ceremony 2024 - 1" style="height: 250px;" >
+        </div>
+        <div class="gallery-item">
+          <img src="{{ url_for('static', filename='imgs/1000006627.jpg')}}" alt="Mitre Ceremony 2024 - 2" style="height: 250px;" >
+        </div>
+        <div class="gallery-item">
+          <img src="{{ url_for('static', filename='imgs/1000006620.jpg')}}" alt="Mitre Ceremony 2024 - 3" style="height: 250px;" >
+        </div>
+     </div>
+
+     <h3>The competition</h3>
+     <p>
+      The MITRE Embedded Capture the Flag (eCTF) Competition is a hands-on challenge 
+      where teams first design secure embedded systems and then attempt to breach each other’s designs. 
+      This two-phase event offers practical experience in creating and testing the security of embedded devices.
+     </p>
+     <iframe src="https://share.hsforms.com/1CD8GyZ1xRuqrVQOxvzq4mg4m7ji" title="Sign Up Form"></iframe>
+
+    </div>
+
+{% endblock %}
+    

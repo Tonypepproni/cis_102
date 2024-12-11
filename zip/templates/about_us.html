@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+    <div class="main_con">
+        <h1>Mission Statement</h1>
+        <p>At Emire Pace, we are dedicated to creating groundbreaking solutions that inspire indiviuals 
+            and teams to reach their fullest potental. 
+            By fostering creativity and teamwork, we aim to overcome challenges, drive progress, 
+            and build a strong foundation for growth. Together, we set the pace for a future that is 
+            inclusive and forward-thinking, paving the way for endless possibilties in every step we take.</p>
+
+    <div class="main_con">
+        <h2>Sponsors</h2>
+        <p>Westchester County Board of Legislator</p>
+        <div class="gallery-item">
+            <img src="{{ url_for('static', filename='imgs/image.png')}}" alt="Westchester County Board of Legislator Logo" style="height: 150px;" >
+          </div>
+        
+    </div>
+
+    <div class="main_con">
+        <h3>Advisors</h3>
+        <p>Professor Lisa Ellrodt</p>
+        <p>Professor Matthew Ganis</p>
+        <p>Dr. Mosley</p>   
+    </div>
+
+{% endblock %}
